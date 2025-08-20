@@ -34,4 +34,6 @@ class Library:
 
     def search_book(self, title):
         for book in self.books:
-            if book.title.lower() == title.lower()
+            if book.title.lower() == title.lower():
+                return book
+        return None
