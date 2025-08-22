@@ -1,5 +1,5 @@
 import Book
-# import Member
+import Member
 
 class Library:
     def _init_(self):
