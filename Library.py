@@ -1,8 +1,8 @@
-import Book
-import Member
+from Book import Book
+from members import Member
 
 class Library:
-    def _init_(self):
+    def __init__(self):
         self.books = []
         self.members = []
 
