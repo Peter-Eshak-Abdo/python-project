@@ -3,7 +3,6 @@ from Library import Library
 def main():
 
     while True:
-        print("\n===== 📚 Library System =====")
         print("1. Add Book")
         print("2. Add Member")
         print("3. List Books")
@@ -11,7 +10,7 @@ def main():
         print("5. Search Book")
         print("6. Exit")
 
-        choice = input("👉 Enter your choice (1-6): ")
+        choice = input("Enter your choice (1-6): ")
 
         if choice == "1":
             title = input("Enter book title: ")
@@ -34,9 +33,9 @@ def main():
             title = input("Enter book title to search: ")
             book = Library().search_book(title)
             if book:
-                print("✅ Book found:", book)
+                print("Book found:", book)
             else:
-                print("❌ Book not found.")
+                print("Book not found.")
 
         elif choice == "6":
             print("Exiting Library System.")
