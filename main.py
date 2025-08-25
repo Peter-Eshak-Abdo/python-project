@@ -1,6 +1,7 @@
 from Library import Library
 
 def main():
+    library = Library()
 
     while True:
         print("1. Add Book")
@@ -16,22 +17,22 @@ def main():
             title = input("Enter book title: ")
             author = input("Enter book author: ")
             year = input("Enter year: ")
-            Library().add_book(title, author, year)
+            library.add_book(title, author, year)
 
         elif choice == "2":
             name = input("Enter member name: ")
             member_id = input("Enter member ID: ")
-            Library().add_member(name, member_id)
+            library.add_member(name, member_id)
 
         elif choice == "3":
-            Library().list_books()
+            library.list_books()
 
         elif choice == "4":
-            Library().list_members()
+            library.list_members()
 
         elif choice == "5":
             title = input("Enter book title to search: ")
-            book = Library().search_book(title)
+            book = library.search_book(title)
             if book:
                 print("Book found:", book)
             else:

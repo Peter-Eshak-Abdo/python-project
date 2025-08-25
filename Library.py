@@ -1,18 +1,18 @@
-from Book import Book
-from members import Member
+from Book import books
+from Member import members
 
 class Library:
     def __init__(self):
-        self.books = []
-        self.members = []
+        self.books = books
+        self.members = members
 
     def add_book(self, title, author, year):
-        book = Book(title, author, year)
+        book = books(title, author, year)
         self.books.append(book)
         print(f"Book '{title}' added successfully.")
 
     def add_member(self, name, member_id):
-        member = Member(name, member_id)
+        member = members(name, member_id)
         self.members.append(member)
         print(f"Member '{name}' registered successfully.")
 

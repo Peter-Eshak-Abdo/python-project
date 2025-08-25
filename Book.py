@@ -19,17 +19,9 @@ class Book:
         return False
 
     def __str__(self):
-        return f"{self.title} {self.author} (year:{self.year})"
+        return f"\nTitle: {self.title} ,Auther: {self.author} ,Year: {self.year}\n"
 
-b1 = Book("1984", "George Orwell",2000)
-b2 = Book("Brave New World", "Aldous Huxley",2000)
-
-
-# print(b1)
-# print(b2)
-
-# b1.Notavailable()
-# print(b1.Not_available)
-
-# b1.return_book()
-# print(b1.Not_available)
+books = [
+    Book("1984", "George Orwell", 2000),
+    Book("Brave New World", "Aldous Huxley", 2000)
+]
