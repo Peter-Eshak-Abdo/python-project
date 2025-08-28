@@ -6,11 +6,14 @@ def main():
     while True:
         print("1. Add Book")
         print("2. Add Member")
-        print("3. List Books")
-        print("4. List Members")
-        print("5. Search Book")
-        print("6. Search Member")
-        print("7. Exit")
+        print("3. Add Section")
+        print("4. List Books")
+        print("5. List Members")
+        print("6. List Section")
+        print("7. Search Book")
+        print("8. Search Member")
+        print("9. Search Section")
+        print("10. Exit")
 
         choice = input("Enter your choice (1-6): ")
 
@@ -26,12 +29,21 @@ def main():
             library.add_member(name, member_id)
 
         elif choice == "3":
-            library.list_books()
+            category = input("Enter category name: ")
+            section_id = input("Enter Section ID: ")
+            count = input("Enter the count: ")
+            library.add_section(category, section_id, count)
 
         elif choice == "4":
-            library.list_members()
+            library.list_books()
 
         elif choice == "5":
+            library.list_members()
+
+        elif choice == "6":
+            library.list_sections()
+
+        elif choice == "7":
             title = input("Enter book title to search: ")
             book = library.search_book(title)
             if book:
@@ -39,7 +51,7 @@ def main():
             else:
                 print("Book not found.")
 
-        elif choice == "6":
+        elif choice == "8":
             name = input("Enter member name to search: ")
             # member_id = input("Enter member ID to search: ")
             # member = library.search_member(name, member_id)
@@ -49,7 +61,16 @@ def main():
             else:
                 print("Member is not found.")
 
-        elif choice == "7":
+
+        elif choice == "9":
+            category = input("Enter category name to search: ")
+            section = library.search_section(category)
+            if section:
+                print("Section found:", section)
+            else:
+                print("Section is not found.")
+
+        elif choice == "10":
             print("Exiting Library System.")
             break
 
