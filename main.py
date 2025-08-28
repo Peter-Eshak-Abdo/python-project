@@ -15,7 +15,7 @@ def main():
         print("9. Search Section")
         print("10. Exit")
 
-        choice = input("Enter your choice (1-6): ")
+        choice = input("Enter your choice (1-10): ")
 
         if choice == "1":
             title = input("Enter book title: ")
