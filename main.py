@@ -61,7 +61,6 @@ def main():
             else:
                 print("Member is not found.")
 
-
         elif choice == "9":
             category = input("Enter category name to search: ")
             section = library.search_section(category)
