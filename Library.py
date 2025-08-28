@@ -40,4 +40,11 @@ class Library:
         for book in self.books:
             if book.title.lower() == title.lower():
                 return book
-        return None
+            
+    def search_member(self, name, member_id):
+        for member in self.members:
+            if member.name.lower() == name.lower():
+                return member
+        for member in self.members:
+            if member.member_id == member_id:
+                return member

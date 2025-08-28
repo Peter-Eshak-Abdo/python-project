@@ -9,7 +9,8 @@ def main():
         print("3. List Books")
         print("4. List Members")
         print("5. Search Book")
-        print("6. Exit")
+        print("6. Search Member")
+        print("7. Exit")
 
         choice = input("Enter your choice (1-6): ")
 
@@ -39,6 +40,16 @@ def main():
                 print("Book not found.")
 
         elif choice == "6":
+            name = input("Enter member name to search: ")
+            # member_id = input("Enter member ID to search: ")
+            # member = library.search_member(name, member_id)
+            member = library.search_member(name)
+            if member:
+                print("Member found:", member)
+            else:
+                print("Member is not found.")
+
+        elif choice == "7":
             print("Exiting Library System.")
             break
 
